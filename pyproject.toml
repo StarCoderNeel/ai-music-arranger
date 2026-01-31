@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-music-arranger"
+version = "0.1.0"
+description = "An AI-powered music arrangement tool that helps musicians generate harmonies, chord progressions, and rhythmic patterns based on user input. The tool provides a creative way to explore new musical ideas and enhance composition workflows."
+dependencies = ['pygame', 'numpy', 'tensorflow', 'matplotlib', 'pydub']
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = "-v --tb=short"
